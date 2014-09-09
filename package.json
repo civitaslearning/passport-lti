@@ -1,0 +1,40 @@
+{
+  "name": "passport-lti",
+  "version": "0.0.1",
+  "description": "Passport-based LTI authorization",
+  "keywords": [
+    "passport",
+    "strategy",
+    "lti"
+  ],
+  "author": {
+    "name": "Civitas Learning",
+    "email": "devteam@civitaslearning.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/civitaslearning/passport-lti.git"
+  },
+  "bugs": {
+    "url": "http://github.com/civitaslearning/passport-lti/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "ims-lti": "0.2.x",
+    "passport-strategy": "1.0.x"
+  },
+  "main": "./lib",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "chai-passport-strategy": "^0.2.0",
+    "mocha": "^1.21.4"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+  }
+}
