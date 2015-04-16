@@ -25,14 +25,14 @@
     }
   ],
   "dependencies": {
-    "passport-strategy": "1.0.x"
+    "passport-strategy": "^1.0.x"
   },
   "peerDependencies": {
-    "ims-lti": "1.0.x"
+    "ims-lti": "^2.1.5"
   },
   "main": "./lib",
   "devDependencies": {
-    "ims-lti": "1.0.x",
+    "ims-lti": "^2.1.5",
     "chai": "^1.9.1",
     "chai-passport-strategy": "^0.2.0",
     "mocha": "^2.0.0"
