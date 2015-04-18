@@ -11,6 +11,9 @@
     "name": "Lewis Zhang",
     "email": "lewiszhang@gmail.com"
   },
+  "engines": {
+    "node": ">=0.10.1"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/civitaslearning/passport-lti.git"
