@@ -25,7 +25,7 @@
     }
   ],
   "dependencies": {
-    "passport-strategy": "^1.0.x"
+    "passport-strategy": "1.0.x"
   },
   "peerDependencies": {
     "ims-lti": "^2.1.5"
