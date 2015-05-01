@@ -26,10 +26,11 @@ describe('Strategy', function() {
       })
       .req(function(req) {
         req.body = CONFIG.body();
+        req.protocol = 'http';
         req.get = function() {
           return 'test-get';
         };
-        req.body.oauth_signature = provider.signer.build_signature(req, CONFIG.lti.consumerSecret);
+        req.body.oauth_signature = provider.signer.build_signature(req, req.body, CONFIG.lti.consumerSecret);
       })
       .authenticate();
     });
@@ -72,13 +73,14 @@ describe('Strategy', function() {
       })
       .req(function(req) {
         req.body = CONFIG.body();
+        req.protocol = 'http'
         req.body.consumerSecret = CONFIG.lti.consumerSecret;
         req.body.consumerKey = CONFIG.lti.consumerKey;
         req.get = function() {
           return 'test-get';
         };
         var provider = new lti.Provider(req.body.consumerKey, req.body.consumerSecret);
-        req.body.oauth_signature = provider.signer.build_signature(req, CONFIG.lti.consumerSecret);
+        req.body.oauth_signature = provider.signer.build_signature(req, req.body, CONFIG.lti.consumerSecret);
       })
       .authenticate();
     });
