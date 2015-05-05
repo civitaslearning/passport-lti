@@ -1,5 +1,8 @@
 # passport-lti
 
+[![Build Status](https://travis-ci.org/civitaslearning/passport-lti.svg)](https://travis-ci.org/civitaslearning/passport-lti)
+[![npm version](https://badge.fury.io/js/passport-lti.svg)](http://badge.fury.io/js/passport-lti)
+
 Passport-flavored LTI authentication middleware for express.
 
 ## Usage
@@ -21,4 +24,10 @@ var strategy = new LTIStrategy({
   return done(null, user);
 });
 passport.use(strategy);
+```
+
+## Tests
+
+```shell
+$ npm test
 ```

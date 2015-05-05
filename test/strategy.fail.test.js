@@ -21,10 +21,11 @@ describe('Strategy', function() {
       })
       .req(function(req) {
         req.body = CONFIG.body();
+        req.protocol = 'http';
         req.get = function() {
           return 'test-get';
         };
-        req.body.oauth_signature = provider.signer.build_signature(req, CONFIG.lti.consumerSecret);
+        req.body.oauth_signature = provider.signer.build_signature(req, req.body, CONFIG.lti.consumerSecret);
       })
       .authenticate();
     });
@@ -52,10 +53,11 @@ describe('Strategy', function() {
       })
       .req(function(req) {
         req.body = CONFIG.body();
+        req.protocol = 'http';
         req.get = function() {
           return 'test-get';
         };
-        req.body.oauth_signature = provider.signer.build_signature(req, CONFIG.lti.consumerSecret);
+        req.body.oauth_signature = provider.signer.build_signature(req, req.body, CONFIG.lti.consumerSecret);
       })
       .authenticate();
     });
@@ -82,6 +84,7 @@ describe('Strategy', function() {
       })
       .req(function(req) {
         req.body = CONFIG.body();
+        req.protocol = 'http';
         req.body.lti_message_type = 'not-lti-launch-request';
         req.get = function() {
           return 'test-get';

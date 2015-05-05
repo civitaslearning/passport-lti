@@ -1,6 +1,6 @@
 {
   "name": "passport-lti",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Passport-based LTI authorization",
   "keywords": [
     "passport",
@@ -10,6 +10,9 @@
   "author": {
     "name": "Lewis Zhang",
     "email": "lewiszhang@gmail.com"
+  },
+  "engines": {
+    "node": ">=0.10.1"
   },
   "repository": {
     "type": "git",
@@ -28,11 +31,11 @@
     "passport-strategy": "1.0.x"
   },
   "peerDependencies": {
-    "ims-lti": "1.0.x"
+    "ims-lti": "2.1.x"
   },
   "main": "./lib",
   "devDependencies": {
-    "ims-lti": "1.0.x",
+    "ims-lti": "2.1.x",
     "chai": "^1.9.1",
     "chai-passport-strategy": "^0.2.0",
     "mocha": "^2.0.0"
