@@ -1,6 +1,6 @@
 {
   "name": "passport-lti",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Passport-based LTI authorization",
   "keywords": [
     "passport",
@@ -31,11 +31,11 @@
     "passport-strategy": "1.0.x"
   },
   "peerDependencies": {
-    "ims-lti": "2.1.x"
+    "ims-lti": "3.0.x"
   },
   "main": "./lib",
   "devDependencies": {
-    "ims-lti": "2.1.x",
+    "ims-lti": "3.0.x",
     "chai": "^1.9.1",
     "chai-passport-strategy": "^0.2.0",
     "mocha": "^2.0.0"
